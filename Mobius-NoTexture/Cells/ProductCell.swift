@@ -24,27 +24,27 @@ final class ProductCell: UICollectionViewCell, Cell {
     override func awakeFromNib() {
         super.awakeFromNib()
                 
-        cardView.layer.cornerRadius = 20
-        cardView.layer.shadowRadius = 2
-        cardView.layer.shadowOffset = CGSize(width: 1, height: 1)
-        cardView.layer.shadowOpacity = 0.6
-        cardView.layer.shadowColor = UIColor.darkGray.cgColor
-        cardView.layer.masksToBounds = false
+//        cardView.layer.cornerRadius = 20
+//        cardView.layer.shadowRadius = 2
+//        cardView.layer.shadowOffset = CGSize(width: 1, height: 1)
+//        cardView.layer.shadowOpacity = 0.6
+//        cardView.layer.shadowColor = UIColor.darkGray.cgColor
+//        cardView.layer.masksToBounds = false
 
         avatarImageView.layer.cornerRadius = 20
         avatarImageView.layer.masksToBounds = true
                         
         
         // FIXME: Blend shadow
-//        let imageView = cardCornerImage(size: cardView.bounds.size)
-//        cardView.insertSubview(imageView, at: 0)
-//
-//        NSLayoutConstraint.activate([
-//            imageView.leftAnchor.constraint(equalTo: cardView.leftAnchor),
-//            imageView.rightAnchor.constraint(equalTo: cardView.rightAnchor),
-//            imageView.topAnchor.constraint(equalTo: cardView.topAnchor),
-//            imageView.bottomAnchor.constraint(equalTo: cardView.bottomAnchor),
-//        ])
+        let imageView = cardCornerImage(size: cardView.bounds.size)
+        cardView.insertSubview(imageView, at: 0)
+
+        NSLayoutConstraint.activate([
+            imageView.leftAnchor.constraint(equalTo: cardView.leftAnchor),
+            imageView.rightAnchor.constraint(equalTo: cardView.rightAnchor),
+            imageView.topAnchor.constraint(equalTo: cardView.topAnchor),
+            imageView.bottomAnchor.constraint(equalTo: cardView.bottomAnchor),
+        ])
 
         // FIXME: Blend
 //        textLabel.backgroundColor = .white
