@@ -34,14 +34,12 @@ final class ProductCellNode: BaseCellNode {
         titleNode.attributedText = NSAttributedString(string: model.text, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17)])
         priceNode.attributedText = NSAttributedString(string: model.price, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 19, weight: .semibold)])
         
-        LoremIpsum.asyncPlaceholderImage(from: .placeKitten, with: .init(width: 40, height: 40)) {[weak self] image in
+        LoremIpsum.asyncPlaceholderImage(from: .dummyImage, with: .init(width: 40, height: 40)) {[weak self] image in
             self?.avatarNode.image = image
-            self?.setNeedsLayout()
         }
         
-        LoremIpsum.asyncPlaceholderImage(from: .placeKitten, with: .init(width: 400, height: 400)) {[weak self] image in
+        LoremIpsum.asyncPlaceholderImage(from: .dummyImage, with: .init(width: 400, height: 400)) {[weak self] image in
             self?.mainImageNode.image = image
-            self?.setNeedsLayout()
         }
     }
     

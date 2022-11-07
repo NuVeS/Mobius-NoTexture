@@ -37,39 +37,39 @@ class BaseCellNode: ASCellNode {
         return imageNode
     }()
 
-//    let bubbleNode: ASDisplayNode = {
-//        let displayNode = ASDisplayNode()
-//        displayNode.backgroundColor = .white
-//        displayNode.cornerRadius = 20
-//
-//        displayNode.shadowRadius = 2
-//        displayNode.shadowOffset = CGSize(width: 1, height: 1)
-//        displayNode.shadowColor = UIColor.black.cgColor
-//        displayNode.shadowOpacity = 0.6
-//
-//        displayNode.isOpaque = true
-//        displayNode.isLayerBacked = true
-//
-//        return displayNode
-//    }()
-
     let bubbleNode: ASDisplayNode = {
-        let backgroundImage = #imageLiteral(resourceName: "corners")
+        let displayNode = ASDisplayNode()
+        displayNode.backgroundColor = .white
+        displayNode.cornerRadius = 20
 
-        let node = ASDisplayNode(viewBlock: {
-            let view = UIImageView()
-            view.image = backgroundImage
-                .opaqueImage(color: UIColor(white: 0.95, alpha: 1))
-                .resizableImage(
-                    withCapInsets: UIEdgeInsets(top: 18, left: 20, bottom: 20, right: 20),
-                    resizingMode: .stretch)
-            view.contentMode = .scaleToFill
-            return view
-        })
-        node.needsDisplayOnBoundsChange = true
-        node.displaysAsynchronously = false
-        return node
+        displayNode.shadowRadius = 2
+        displayNode.shadowOffset = CGSize(width: 1, height: 1)
+        displayNode.shadowColor = UIColor.black.cgColor
+        displayNode.shadowOpacity = 0.6
+
+        displayNode.isOpaque = true
+        displayNode.isLayerBacked = true
+
+        return displayNode
     }()
+
+//    let bubbleNode: ASDisplayNode = {
+//        let backgroundImage = #imageLiteral(resourceName: "corners")
+//
+//        let node = ASDisplayNode(viewBlock: {
+//            let view = UIImageView()
+//            view.image = backgroundImage
+//                .opaqueImage(color: UIColor(white: 0.95, alpha: 1))
+//                .resizableImage(
+//                    withCapInsets: UIEdgeInsets(top: 18, left: 20, bottom: 20, right: 20),
+//                    resizingMode: .stretch)
+//            view.contentMode = .scaleToFill
+//            return view
+//        })
+//        node.needsDisplayOnBoundsChange = true
+//        node.displaysAsynchronously = false
+//        return node
+//    }()
 
     override init() {
         super.init()
