@@ -31,8 +31,8 @@ final class ProductCell: UICollectionViewCell, Cell {
 //        cardView.layer.shadowColor = UIColor.darkGray.cgColor
 //        cardView.layer.masksToBounds = false
 
-        avatarImageView.layer.cornerRadius = 20
-        avatarImageView.layer.masksToBounds = true
+//        avatarImageView.layer.cornerRadius = 20
+//        avatarImageView.layer.masksToBounds = true
                         
         
         // FIXME: Blend shadow
@@ -47,9 +47,9 @@ final class ProductCell: UICollectionViewCell, Cell {
         ])
 
         // FIXME: Blend
-//        textLabel.backgroundColor = .white
-//        priceLabel.backgroundColor = .white
-//        avatarImageView.backgroundColor = .white
+        textLabel.backgroundColor = .white
+        priceLabel.backgroundColor = .white
+        avatarImageView.backgroundColor = .white
     }
     
     func configure(with model: ViewModel) {
@@ -61,10 +61,10 @@ final class ProductCell: UICollectionViewCell, Cell {
         priceLabel.text = model.price
         
         LoremIpsum.asyncPlaceholderImage(from: .placeKitten, with: .init(width: 40, height: 40)) {[weak self] image in
-            self?.avatarImageView.image = image
+//            self?.avatarImageView.image = image
             
             // FIXME: Misaligned image
-//            self?.avatarImageView.image = image?.roundedImage()
+            self?.avatarImageView.image = image?.roundedImage()
         }
         
         // FIXME: Misaligned image 400 400
